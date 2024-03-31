@@ -25,6 +25,7 @@
     <script>
       const hideFullScreenButton = "1";
       const buildUrl = "Build";
+	  const mobilePixelRatio = "0.5";
       const loaderUrl = buildUrl + "/WebGL_Demo_Public.loader.js";
       const config = {
         dataUrl: buildUrl + "/WebGL_Demo_Public.data.unityweb",
@@ -61,7 +62,7 @@
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
-        config.devicePixelRatio = 0.5;
+        config.devicePixelRatio = parseFloat(mobilePixelRatio);
       }
       loadingCover.style.display = "";
 
